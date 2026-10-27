@@ -2,8 +2,8 @@
     "name": "adianti-intellisense",
     "displayName": "Adianti IntelliSense",
     "description": "Autocomplete semântico para o Adianti Framework: classes, métodos com inferência de tipo, modelos TRecord, conexões, callbacks de TAction, assinaturas, hover e exemplos do Tutor.",
-    "version": "1.2.0",
-    "publisher": "buscabusca",
+    "version": "1.2.1",
+    "publisher": "WillGolden80742",
     "author": {
         "name": "WillGolden80742",
         "url": "https://github.com/WillGolden80742"

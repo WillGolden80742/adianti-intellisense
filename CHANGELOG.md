@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.1
+- Publisher alterado para `WillGolden80742` (o ID da extensão passa a ser `WillGolden80742.adianti-intellisense`).
+
 ## 1.2.0
 - Chamadas estáticas sem `new`: ao digitar o nome da classe, a lista já oferece `Classe::metodo(...)` para todos os métodos estáticos públicos do framework (298 em 74 classes, ex.: `TBreadCrumb::create`, `TTransaction::open`, `TSession::getValue`, `TPanelGroup::pack`), os das classes do projeto e os mais usados de TRecord nos modelos (`Customer::find`, `Customer::where`…). Ordenados pelo uso no Tutor; não aparecem em posições de tipo (parâmetros, catch, retorno).
 

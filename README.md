@@ -11,7 +11,7 @@ O índice vem de duas fontes:
 1. Baixe o `.vsix` da versão mais recente em **[Releases](https://github.com/WillGolden80742/adianti-intellisense/releases/latest)**.
 2. Instale pelo terminal:
    ```bash
-   code --install-extension adianti-intellisense-1.2.0.vsix
+   code --install-extension adianti-intellisense-1.2.1.vsix
    ```
    Ou pelo VS Code: **Extensões** → menu `···` → **Install from VSIX…**
 3. Recarregue a janela (**Developer: Reload Window**).
