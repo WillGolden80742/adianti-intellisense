@@ -6,6 +6,18 @@ O índice vem de duas fontes:
 - **o código-fonte do framework** (`lib/adianti` e `vendor/adianti`), com 211 classes e cerca de 2.090 métodos, cada um com assinatura e docblock;
 - **os 369 exemplos de código do Adianti Tutor**, de onde saem os exemplos de uso, a ordem das sugestões e os valores mais comuns de cada argumento.
 
+## Instalação
+
+1. Baixe o `.vsix` da versão mais recente em **[Releases](https://github.com/WillGolden80742/adianti-intellisense/releases/latest)**.
+2. Instale pelo terminal:
+   ```bash
+   code --install-extension adianti-intellisense-1.2.0.vsix
+   ```
+   Ou pelo VS Code: **Extensões** → menu `···` → **Install from VSIX…**
+3. Recarregue a janela (**Developer: Reload Window**).
+
+Para atualizar, baixe o `.vsix` novo e instale com `--force`. As mudanças de cada versão estão no [CHANGELOG](CHANGELOG.md) e nas [Releases](https://github.com/WillGolden80742/adianti-intellisense/releases).
+
 ## O que ela faz
 
 ### Classes
@@ -111,7 +123,7 @@ $sale->hasMany('SaleItem');        // SaleItem[]
 ```bash
 npm run build-data   # regenera data/ a partir do Tutor e dos SKILL.md
 npm test             # testes do motor semântico
-npx @vscode/vsce package --allow-missing-repository
+npx @vscode/vsce package
 ```
 
 ## Autor
