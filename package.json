@@ -1,0 +1,96 @@
+{
+    "name": "adianti-intellisense",
+    "displayName": "Adianti IntelliSense",
+    "description": "Autocomplete semântico para o Adianti Framework: classes, métodos com inferência de tipo, modelos TRecord, conexões, callbacks de TAction, assinaturas, hover e exemplos do Tutor.",
+    "version": "1.2.0",
+    "publisher": "buscabusca",
+    "author": {
+        "name": "WillGolden80742",
+        "url": "https://github.com/WillGolden80742"
+    },
+    "license": "SEE LICENSE IN LICENSE.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WillGolden80742/adianti-intellisense.git"
+    },
+    "bugs": {
+        "url": "https://github.com/WillGolden80742/adianti-intellisense/issues"
+    },
+    "homepage": "https://github.com/WillGolden80742/adianti-intellisense#readme",
+    "icon": "images/icon.png",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "adianti",
+        "adianti framework",
+        "php",
+        "intellisense",
+        "autocomplete",
+        "tutor"
+    ],
+    "activationEvents": [
+        "onLanguage:php"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "adianti.insertExample",
+                "title": "Inserir exemplo do Tutor",
+                "category": "Adianti"
+            },
+            {
+                "command": "adianti.reindex",
+                "title": "Reindexar classes do workspace",
+                "category": "Adianti"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "php",
+                "path": "./snippets/adianti.code-snippets"
+            }
+        ],
+        "configuration": {
+            "title": "Adianti IntelliSense",
+            "properties": {
+                "adianti.workspace.index": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Indexa as classes PHP do workspace (models, controls) para o autocomplete semântico."
+                },
+                "adianti.workspace.exclude": {
+                    "type": "string",
+                    "default": "**/{vendor,node_modules,tmp,.git,lib/adianti}/**",
+                    "description": "Glob de arquivos ignorados na indexação. O framework (lib/adianti) já vem embutido na extensão."
+                },
+                "adianti.workspace.maxFiles": {
+                    "type": "number",
+                    "default": 5000,
+                    "description": "Máximo de arquivos PHP indexados."
+                },
+                "adianti.completion.classes": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Sugere classes do Adianti e do projeto ao digitar nomes de classe (desative se outra extensão já fizer isso)."
+                },
+                "adianti.completion.tutorLiterals": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Sugere, dentro de strings, os valores mais usados nos exemplos do Tutor para o mesmo argumento (ex.: tipos de TMessage, máscaras, ícones)."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "build-data": "node scripts/build-data.js ../adianti-tutor-8.7.0/tutor ../ADIANTI-MODULOS",
+        "test": "node test/smoke.js",
+        "package": "vsce package"
+    }
+}
